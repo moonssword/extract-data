@@ -8,10 +8,9 @@ require('dotenv').config();
 const keyPath = path.join(__dirname, 'service-account.json');
 const client = new vision.ImageAnnotatorClient({ keyFilename: keyPath });
 
-const DATA_DIR = path.join(__dirname, 'data'); // Папка с входными файлами
-const OUTPUT_DIR = path.join(__dirname, 'output'); // Папка с выходными файлами
+const DATA_DIR = path.join(__dirname, 'data');
+const OUTPUT_DIR = path.join(__dirname, 'output');
 
-// Создаем папку output, если её нет
 if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR);
 }
@@ -102,7 +101,7 @@ async function processFile(filePath) {
     if (extractedText) {
         const extractedData = await extractKeyFields(extractedText);
         if (extractedData) {
-            extractedData.source_file = path.basename(filePath); // Добавляем имя файла
+            extractedData.source_file = path.basename(filePath);
             return extractedData;
         }
     }
