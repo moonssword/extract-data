@@ -64,7 +64,6 @@ GOOGLE_APPLICATION_CREDENTIALS=service-account.json
 OPENAI_API_KEY=your-openai-api-key
 ```
 
-**Важно!** Файл `service-account.json` должен содержать ключ Google Cloud Vision API.
 
 ### 4️⃣ Подготовьте входные файлы
 
