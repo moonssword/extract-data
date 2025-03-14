@@ -64,7 +64,6 @@ GOOGLE_APPLICATION_CREDENTIALS=service-account.json
 OPENAI_API_KEY=your-openai-api-key
 ```
 
-**Важно!** Файл `service-account.json` должен содержать ключ Google Cloud Vision API.
 
 ### 4️⃣ Подготовьте входные файлы
 
@@ -125,8 +124,4 @@ response.data.choices[0].message.content.replace(/^```json\s*|```$/g, "").trim()
 
 ### ❌ `Error: poppler-utils not found`
 💡 **Решение:** Проверьте, что PDF-Poppler установлен и доступен в `PATH`.
-
----
-## 📞 Поддержка
-Если у вас возникли вопросы, создайте issue в репозитории или свяжитесь с автором проекта. 🚀
 
